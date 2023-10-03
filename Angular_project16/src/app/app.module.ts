@@ -7,6 +7,7 @@ import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { LandingComponent } from './landing/landing.component';
 import { LoginComponent } from './login/login.component';
+import { LangingComponent } from './langing/langing.component';
 
 
 
@@ -18,6 +19,7 @@ import { LoginComponent } from './login/login.component';
     AppComponent,
     LandingComponent,
     LoginComponent,
+    LangingComponent,
    
 
 
