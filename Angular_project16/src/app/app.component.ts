@@ -9,21 +9,8 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
   title = 'Angular_project16';
-  constructor(private router:Router){
-  }
-  homecomponent(){
-    this.router.navigateByUrl('/home')
-  }
-  aboutcomponent(){
-    this.router.navigateByUrl('/about')
-  }
-  usercomponent(){
-    this.router.navigateByUrl('/user')
-  }
-ownerlogin(){
-  this.router.navigateByUrl('owner/ownerlogin')
-}
  
+
  }
     
   
