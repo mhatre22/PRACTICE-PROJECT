@@ -9,7 +9,7 @@ const routes: Routes = [
  {path:'home', component: HomeComponent},
  {path: 'about', component: AboutComponent },
  {path: 'user', component: UserComponent},
-{path:'owner',loadChildren: ()=> import('./owner/owner.module').then(mod=> mod.OwnerModule)}
+ {path: 'owner', loadChildren: ()=> import('./owner/owner.module').then(module=>module.OwnerModule)}
 
 
 
