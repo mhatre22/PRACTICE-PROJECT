@@ -9,7 +9,6 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
   title = 'Angular_project16';
- 
 
  }
     

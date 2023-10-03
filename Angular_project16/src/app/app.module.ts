@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
+import { LandingComponent } from './landing/landing.component';
+import { LoginComponent } from './login/login.component';
 
 
 
@@ -14,6 +16,8 @@ import { AppRoutingModule } from './app-routing.module';
 @NgModule({
   declarations: [
     AppComponent,
+    LandingComponent,
+    LoginComponent,
    
 
 
