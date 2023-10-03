@@ -9,7 +9,7 @@ const routes: Routes = [
   {path:'home', component: HomeComponent},
   {path:'about', component: AboutComponent},
   {path:'user', component: UserComponent},
-  {path:'adminlogin',loadChildren:()=>import('./admin/admin.module').then(mod=>mod.AdminModule)},
+  {path: 'admin/adminlogin', loadChildren: () =>import('./admin/admin.module').then(mod=> mod.AdminModule)},
 
 
 ];

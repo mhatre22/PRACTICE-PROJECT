@@ -21,7 +21,7 @@ export class AppComponent {
     this.router.navigateByUrl('/user')
   }
   adminlogincomponent(){
-  this.router.navigateByUrl('/adminlogin')
+  this.router.navigateByUrl('/admin/adminlogin')
  
  }
     
