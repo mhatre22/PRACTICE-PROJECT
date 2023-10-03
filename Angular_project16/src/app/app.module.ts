@@ -6,6 +6,8 @@ import { RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { UserComponent } from './user/user.component';
+import { AppRoutingModule } from './app-routing.module';
+import { AdminloginComponent } from './admin/adminlogin/adminlogin.component';
 
 
 @NgModule({
@@ -14,12 +16,15 @@ import { UserComponent } from './user/user.component';
     HomeComponent,
     AboutComponent,
     UserComponent,
+    AdminloginComponent,
+
    
   
   ],
   imports: [
     BrowserModule,
-    RouterModule
+    RouterModule,
+    AppRoutingModule
 
 
   ],
