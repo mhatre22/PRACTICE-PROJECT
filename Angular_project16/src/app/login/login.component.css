@@ -1,9 +1,9 @@
-.parent{
-    background-color: antiquewhite;
+.container{
+    background-color: rgb(241, 178, 226);
     height: 1000px;
     width: 100%;
 }
-.heading{
+.heading1{
     text-align: center;
 }
 .button{
