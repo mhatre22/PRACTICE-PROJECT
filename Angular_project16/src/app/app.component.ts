@@ -20,12 +20,13 @@ export class AppComponent {
   usercomponent(){
     this.router.navigateByUrl('/user')
   }
-  adminlogincomponent(){
-  this.router.navigateByUrl('/admin/adminlogin')
+ownerlogin(){
+  this.router.navigateByUrl('owner/ownerlogin')
+}
  
  }
     
-  }
+  
 
 
 

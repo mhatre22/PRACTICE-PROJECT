@@ -7,10 +7,9 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { UserComponent } from './user/user.component';
 import { AppRoutingModule } from './app-routing.module';
-import { AdminloginComponent } from './admin/adminlogin/adminlogin.component';
-import { AdminsignupComponent } from './admin/adminsignup/adminsignup.component';
 import { OwnerloginComponent } from './ownerlogin/ownerlogin.component';
 import { OwnersignupComponent } from './ownersignup/ownersignup.component';
+
 
 
 
@@ -21,11 +20,8 @@ import { OwnersignupComponent } from './ownersignup/ownersignup.component';
     HomeComponent,
     AboutComponent,
     UserComponent,
-    AdminloginComponent,
-    AdminsignupComponent,
-    OwnerloginComponent,
-    OwnersignupComponent,
- 
+   OwnerloginComponent,
+   OwnersignupComponent
 
    
   
@@ -33,7 +29,6 @@ import { OwnersignupComponent } from './ownersignup/ownersignup.component';
   imports: [
     BrowserModule,
     RouterModule,
-
     AppRoutingModule
 
 
