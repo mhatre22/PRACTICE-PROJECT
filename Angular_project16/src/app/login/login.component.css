@@ -10,3 +10,25 @@
     background-color: rgb(76, 220, 76);
     size: 1px;
 }
+.login{
+    text-align: center;
+    margin:auto;
+    height: 400px;
+    width: 300px;
+padding: 6px 7px;
+border: 1px solid black;
+background-color: rgb(193, 236, 221);
+}
+.label{
+    font-size: 20px;
+    padding: 5px;
+    margin-top: 10px;
+    width: 200px;
+
+}
+.pass{
+    font-size: 20px;
+    padding: 5px;
+    position: relative;
+    top: 15px;
+}

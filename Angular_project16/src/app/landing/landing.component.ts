@@ -15,7 +15,10 @@ login(){
 signup(){
   this.router.navigateByUrl('signup')
 }
-student(){
-  this.router.navigateByUrl('student')
+studentactivity(){
+  this.router.navigateByUrl('student/studentactivity')
+}
+studentdemo(){
+  this.router.navigateByUrl('student/studentdemo')
 }
 }

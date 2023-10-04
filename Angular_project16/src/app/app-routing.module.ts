@@ -10,7 +10,8 @@ const routes: Routes = [
 {path: 'landing', component: LandingComponent},
 {path: 'login', component: LoginComponent},
 {path: 'signup' ,component: SignupComponent},
-{path:'student', loadChildren: ()=> import('./student/student.module').then(module=>module.StudentModule)}
+{path:'student', loadChildren: ()=> import('./student/student.module').then(module=>module.StudentModule)},
+
 
 
 
