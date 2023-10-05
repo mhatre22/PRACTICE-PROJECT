@@ -3,3 +3,28 @@
     <button class="button" (click)="landing()"><u>Back</u></button>
 <div *ngIf="show">i live in mubai</div>
 <p>testttt</p>
+
+<!-------<div *ngFor="let data of car">
+    <ul>
+  <li>  {{data}} </li>
+</ul>
+</div><br>------>
+<table class="table-container">
+    <tr >
+        <th *ngFor="let heading of tableHeadings">{{heading}}</th>
+</tr>
+    <tr *ngFor="let tabledata of CarDetail">
+    <td>{{tabledata.CarName}}</td>
+    <td>{{tabledata.CarPrice}}</td>
+    <td>{{tabledata.CarColor}}</td>
+</tr>
+</table><br>
+
+
+
+
+<div class="container">i love u baby</div>
+
+<div  [ngclass]="color  == 'pink' ? 'container1' : 'container' ">
+    i love u baby
+</div>

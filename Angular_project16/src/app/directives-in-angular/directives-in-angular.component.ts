@@ -13,10 +13,15 @@ landing(){
   this.router.navigateByUrl('landing')
 }
 show= true;
+tableHeadings : string[]=['CarName','CarPrice','CarColor']
 
-
-
-
+CarDetail =[
+{CarName: 'minicup', CarPrice:800000, CarColor:'Black'},
+{CarName: 'marcedeez', CarPrice:1200000, CarColor:'White'},
+{CarName: 'thar', CarPrice:900000, CarColor:'Black'},
+{CarName: 'swift', CarPrice:200000, CarColor:'Black'},
+]
+color  = 'pink';
 
 
 }
