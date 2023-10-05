@@ -21,4 +21,7 @@ studentactivity(){
 studentdemo(){
   this.router.navigateByUrl('student/studentdemo')
 }
+directive(){
+  this.router.navigateByUrl('directive')
+}
 }

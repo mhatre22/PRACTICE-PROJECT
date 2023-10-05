@@ -1,0 +1,14 @@
+.button{
+    background-color: rgb(76, 220, 76);
+    size: 1px;
+}
+.directive{
+    background-color: rgb(248, 113, 71);
+    height: 1000px;
+    width: 100%;
+
+}
+.center{
+    text-align: center;
+
+}
