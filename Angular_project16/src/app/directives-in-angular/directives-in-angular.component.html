@@ -10,21 +10,35 @@
 </ul>
 </div><br>------>
 <table class="table-container">
-    <tr >
+    <tr>
         <th *ngFor="let heading of tableHeadings">{{heading}}</th>
+    </tr>
+<tr *ngFor="let tabledata of CarDetail">
+    <td> {{tabledata.CarName}} </td>
+    <td> {{tabledata.CarPrice}} </td>
+    <td> {{tabledata.CarColor}} </td>
 </tr>
-    <tr *ngFor="let tabledata of CarDetail">
-    <td>{{tabledata.CarName}}</td>
-    <td>{{tabledata.CarPrice}}</td>
-    <td>{{tabledata.CarColor}}</td>
-</tr>
+
+
 </table><br>
-
-
-
-
 <div class="container">i love u baby</div>
-
 <div [ngClass]="color  == 'pink' ? 'container1' : 'container' ">
     i love u baby
+<h2 [class.container] ="multiclasses == 100"
+[class.container1] ="multiclasses == 200"
+[class.container2] ="multiclasses == 300" >
+2222222222222222222222222222222222222
+ </h2>
+
+<br><br><br>
+<div [ngSwitch]="switchvalue">
+    <h1 *ngSwitchCase ="600"> 600 value</h1>
+   <h1 *ngSwitchCase ="300">  300 value</h1>
+   <h1 *ngSwitchCase = "100"> 100 value</h1>
+</div>
+
+
+
+
+
 </div>

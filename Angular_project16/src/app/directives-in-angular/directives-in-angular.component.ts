@@ -22,6 +22,9 @@ CarDetail =[
 {CarName: 'swift', CarPrice:200000, CarColor:'Black'},
 ]
 color  = 'pink';
+multiclasses = 300;
+
+switchvalue = 300;
 
 
 }
