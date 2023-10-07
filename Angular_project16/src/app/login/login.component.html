@@ -1,14 +1,27 @@
-<div class="container">
-    <h2 class="heading1">Login screen</h2>
+  <div class="container"><br><br>
+    <br><h2 class="heading1">Login Form</h2>
    
  <button class="button"(click)="landing()"><u>Back</u></button> &nbsp;
- <div class="center">
- <form class="login">
-<label class="tex">User Name</label><br>&nbsp;
-<input  class="int-text" type="text"><br>&nbsp;
+ <div class="center"><br><br>
+
+ <form #loginForm = "ngForm" class="login">
+<label class="tex">Full Name</label><br>&nbsp;
+<input   type="text"  class="int-text" name ="fullName" pattern="[a-zA-Z]*$"
+ ngModel #fullName ='ngModel' required minlength="8" maxlength="12"><br>&nbsp;
+<span class="span-err" *ngIf="fullName.errors?.['pattern'] && fullName.touched"> Enter only Alphabate</span>
+<span class="span-err" *ngIf="fullName.errors?.['minlength'] && !fullName.errors?.['pattern'] " >Fullname Should Be 8 Alphabate </span>
+
 <label class="pass">Password</label><br><br>&nbsp;
-<input class="int-text" type="text"><br><br> &nbsp;
-<button class="btn-sub"><u>SUBMIT</u></button>
+<input  type="text" class="int-text" minlength="8" pattern="[A-Z]{1}[a-zA-Z0-9@#!$%&^*]{8}$" ngModel name="Password" #password ="ngModel" ><br><br> &nbsp;
+<span class="span-err" *ngIf="password.errors?.['minlength']" >Password Should be 8 characters </span>
+<span class="span-err" *ngIf="password.errors?.['pattern'] && !password.errors?.['minlength'] " >Please match password</span>
+<label class="gender">Gender :</label><br><br>
+<input type="radio" required value="male" name="gender" ngMode male="ngModel">male
+<input type="radio" required value="Female" name="gender" ngModel Female="ngModel">Female
+<input type="radio" required value="other" name="gender" ngModel other="ngModel">other
+<span class="span-err" *ngIf="gender.errors?.['required']">Gender is required</span>
+
+<br><br><button class="btn-sub"[disabled]= !loginForm.valid (click)="sumbit(loginForm.value)"><u>SUBMIT</u></button>
 
 </form>
 </div>

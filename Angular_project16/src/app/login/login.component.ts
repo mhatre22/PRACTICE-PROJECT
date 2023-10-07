@@ -13,5 +13,8 @@ export class LoginComponent {
   landing(){
     this.router.navigateByUrl('landing')
   }
+  sumbit(fromData:any){
+    console.log(fromData);
 
+  }
 }

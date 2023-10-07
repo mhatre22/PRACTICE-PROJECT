@@ -1,8 +1,10 @@
+
 .container{
 
     background-color: rgb(241, 178, 226);
     height: 1000px;
     width: 100%;
+    text-align: center;
 }
 .heading1{
     text-align: center;
@@ -10,6 +12,7 @@
 .button{
     background-color: rgb(76, 220, 76);
     size: 1px;
+    text-align: end;
 }
 .login{
     text-align: center;
@@ -42,4 +45,9 @@ background-color: rgb(193, 236, 221);
 }
 .center{
     text-align: center;
+}
+.span-err{
+    color: red;
+    font-size: medium;
+    position: relative;
 }

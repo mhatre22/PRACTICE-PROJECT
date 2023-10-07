@@ -1,11 +1,13 @@
 .button{
     background-color: rgb(76, 220, 76);
     size: 1px;
+    text-align: center;
 }
 .directive{
     background-color: rgb(235, 167, 146);
     height: 1000px;
     width: 100%;
+ text-align: center;
 
 }
 .center{
@@ -16,12 +18,14 @@
 background-color: rgb(252, 229, 97);
 height: 300px;
 width: 250px;
+text-align: center;
 
 }
 .table-container,th,td,tr{
     border: 1px solid red;
     border-collapse: collapse;
     padding: 10px 10px;
+    text-align: center;
 }
 .container1{
     color: rgb(238, 10, 170);
