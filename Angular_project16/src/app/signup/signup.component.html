@@ -3,22 +3,25 @@
  <button routerLink="/landing"><u>Back</u></button>
  <br><br>
 
- <div class="reactive" [formGroup]="signUpForm!">
-<form>
+ <div class="reactive">
+<form  [formGroup]="signUpForm!">
     <br>
-<label class="text">Name : </label>
-<input   class="text" type="text" formControlName="name" ><br><br>
-<label class="text">Email : </label>
-<input  class="text"  type="text" formControlName="email"><br><br>
-<label class="text">Contact : </label>
-<input class="text" type="text" formControlName="contact"><br><br>
-<label class="text">Address : </label>
-<input class="text" type="text" formControlName="address"><br><br>
+<label class="text">Name : </label><br>
+<input class="text" type="text" formControlName="name" ><br>
+<span class="err" *ngIf="signUpForm.get('name')?.errors?.['required'] && signUpForm.get('name')?.touched">Name is required</span>
+<span class="err" *ngIf="signUpForm.get('name')?.errors?.['pattern']">Please Enter valid Name</span>
+<label class="text">Email : </label><br>
+<input  class="text"  type="text" formControlName="email"><br>
+
+<label class="text">Contact : </label><br>
+<input class="text" type="text" formControlName="contact"><br>
+<label class="text">Address : </label><br>
+<input class="text" type="text" formControlName="address"><br>
 <label >Gender : </label><br>
-<input type="radio" formcontrolName="gender" value="male">Male
-<input type="radio" formcontrolName="gender" value="Female">Female
-<input type="radio" formcontrolName="gender" value="other">other
-<button class="sub-mit"><u>SUBMIT</u></button>
+<input type="radio" formControlName="gender" value="male">Male
+<input type="radio" formControlName="gender" value="Female">Female
+<input type="radio" formControlName="gender" value="other">other
+<button  [disabled]="!signUpForm.valid" class="sub-mit"><u>SUBMIT</u></button>
 </form>
  </div>
 </div>

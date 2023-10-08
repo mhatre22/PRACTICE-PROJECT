@@ -2,7 +2,7 @@
     background-color: rgb(192, 233, 245);
     height: 1000px;
     width: 100%;
-  text-align: center;
+
 
 }
 .button{
@@ -14,6 +14,7 @@
     padding: 2px;
 width: 300px;
 margin-top: 10px;
+
 }
 .sub-mit{
     background-color:rgb(76, 220, 76);
@@ -21,9 +22,14 @@ margin-top: 10px;
 }
 .reactive{
     border: 2px solid black;
-    height: 4name00px;
+    height: 400px;
     width: 500px;
-   text-align: center;
+text-align: left;
    background-color: rgb(227, 206, 237);
 
+}
+.err{
+    color: red;
+    font-size:large ;
+   
 }

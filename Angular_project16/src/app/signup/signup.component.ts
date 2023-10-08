@@ -1,6 +1,7 @@
 
 import { Component } from '@angular/core';
-import { FormGroup ,FormBuilder,Validator} from '@angular/forms';
+import { FormBuilder, Validators} from '@angular/forms';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-signup',
@@ -8,28 +9,23 @@ import { FormGroup ,FormBuilder,Validator} from '@angular/forms';
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent {
-signUpForm! : FormGroup;
-
-
-
-constructor(private formBuilder : FormBuilder){
+signUpForm !: FormGroup;
+  
+constructor( private formBuilder : FormBuilder){
 }
-ngOnInit(){
-
-  this.signUpFormControlls();
-}
-
-signUpFormControlls(){
+  ngOnInit(){
+    this.signUpFormControlls()
+  }
+  signUpFormControlls(){
 this.signUpForm = this.formBuilder.group({
-name : ['',],
-email : ['',],
-contact : ['',],
-address : ['',],
-gender : ['',]
-
+  name : ['',[Validators.required, Validators.pattern("[a-zA-Z]*$"), Validators.minLength(15)]],
+  email : ['', Validators.required, Validators.email],
+  contact : ['', Validators.required],
+  address : ['', Validators.required],
+  gender : ['', Validators.required]
 })
 
-}
 
+}
 }
 
