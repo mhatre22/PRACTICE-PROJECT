@@ -1,5 +1,6 @@
+
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { FormGroup ,FormBuilder,Validator} from '@angular/forms';
 
 @Component({
   selector: 'app-signup',
@@ -7,9 +8,28 @@ import { Router } from '@angular/router';
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent {
-constructor(private router : Router){
+signUpForm! : FormGroup;
+
+
+
+constructor(private formBuilder : FormBuilder){
 }
-landing(){
-  this.router.navigateByUrl('landing')
+ngOnInit(){
+
+  this.signUpFormControlls();
 }
+
+signUpFormControlls(){
+this.signUpForm = this.formBuilder.group({
+name : ['',],
+email : ['',],
+contact : ['',],
+address : ['',],
+gender : ['',]
+
+})
+
 }
+
+}
+

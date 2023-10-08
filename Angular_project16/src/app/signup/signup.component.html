@@ -1,3 +1,24 @@
+
 <div class="signup"><h2>Sign Up</h2>
- <button  class="button" (click)="landing()"><u>Back</u></button>
+ <button routerLink="/landing"><u>Back</u></button>
+ <br><br>
+
+ <div class="reactive" [formGroup]="signUpForm!">
+<form>
+    <br>
+<label class="text">Name : </label>
+<input   class="text" type="text" formControlName="name" ><br><br>
+<label class="text">Email : </label>
+<input  class="text"  type="text" formControlName="email"><br><br>
+<label class="text">Contact : </label>
+<input class="text" type="text" formControlName="contact"><br><br>
+<label class="text">Address : </label>
+<input class="text" type="text" formControlName="address"><br><br>
+<label >Gender : </label><br>
+<input type="radio" formcontrolName="gender" value="male">Male
+<input type="radio" formcontrolName="gender" value="Female">Female
+<input type="radio" formcontrolName="gender" value="other">other
+<button class="sub-mit"><u>SUBMIT</u></button>
+</form>
+ </div>
 </div>

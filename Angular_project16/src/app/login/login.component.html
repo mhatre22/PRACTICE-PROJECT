@@ -16,10 +16,10 @@
 <span class="span-err" *ngIf="password.errors?.['minlength']" >Password Should be 8 characters </span>
 <span class="span-err" *ngIf="password.errors?.['pattern'] && !password.errors?.['minlength'] " >Please match password</span>
 <label class="gender">Gender :</label><br><br>
-<input type="radio" required value="male" name="gender" ngMode male="ngModel">male
-<input type="radio" required value="Female" name="gender" ngModel Female="ngModel">Female
-<input type="radio" required value="other" name="gender" ngModel other="ngModel">other
-<span class="span-err" *ngIf="gender.errors?.['required']">Gender is required</span>
+<input type="radio" required value="male" name="gender" ngModel  #gender='ngModel'>male
+<input type="radio" required value="Female" name="gender" ngModel  #gender='ngModel'>Female
+<input type="radio" required value="other" name="gender" ngModel  #gender='ngModel'>other
+<span class="span-err" *ngIf="gender.errors?.['required'] ">Gender is required</span>
 
 <br><br><button class="btn-sub"[disabled]= !loginForm.valid (click)="sumbit(loginForm.value)"><u>SUBMIT</u></button>
 
