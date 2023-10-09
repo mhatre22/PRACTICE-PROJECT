@@ -1,4 +1,4 @@
-
+ 
 <div class="signup"><h2>Sign Up</h2>
  <button  class="sub-mit" routerLink="/landing"><u>Back</u></button>
  <br><br>
@@ -11,15 +11,15 @@
 <span class="err" *ngIf="signUpForm.get('fullname')?.errors?.['required'] && signUpForm.get('fullname')?.touched">fullName is required</span>
 <span class="err" *ngIf="signUpForm.get('fullname')?.errors?.['pattern']">Please Enter valid fullName</span>
 <span class="err" *ngIf="signUpForm.get('fullname')?.errors?.['minlength'] && !signUpForm.get('fullname')?.errors?.['pattern']">fullName should be 15 Alphbate</span>
-<label class="texr">Mob No</label><br>
+<label class="text">Mobile No : </label><br>
 <input class="text" type="text" formControlName="mobilenumber"><br>
-<span class="err" *ngIf="signUpForm.get('mobilenumber')?.errors?.['required'] && signUpForm.get('mobilenumber')?.touched">Mobile Number is required</span>
 
+<span class="err" *ngIf="signUpForm.get('mobilenumber')?.errors?.['required']">Mobile number is required</span>
+<span class="err" *ngIf="signUpForm.get('mobilenumber')?.errors?.['pattern'] && signUpForm.get('mobilenumber')?.touched">Mobile number should in integer</span>
+<span class="err" *ngIf="signUpForm.get('mobilenumber')?.errors?.['minlength'] && !signUpForm.get('mobilenumber')?.errors?.['pattern']">Enter only 10 digit</span>
+<span class="err" *ngIf="signUpForm.get('mobilenumber')?.errors?.['maxlength']">maximum 10 digit</span>
 <label class="text">Email : </label><br>
 <input  class="text"  type="text" formControlName="email"><br>
-
-<label class="text">Contact : </label><br>
-<input class="text" type="text" formControlName="contact"><br>
 <label class="text">Address : </label><br>
 <input class="text" type="text" formControlName="address"><br>
 <label >Gender : </label><br>

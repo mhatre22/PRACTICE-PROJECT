@@ -20,7 +20,7 @@ constructor( private formBuilder : FormBuilder){
 this.signUpForm = this.formBuilder.group({
   fullname : ['',[Validators.required, Validators.pattern("[a-zA-Z]*$"), Validators.minLength(10)]],
   email : ['', Validators.required, Validators.email],
-mobilenumber : ['', Validators.required],
+mobilenumber : ['',[Validators.required, Validators.minLength(10),Validators.maxLength(10),Validators.pattern("[0-9]*$")]],
   address : ['', Validators.required],
   gender : ['', Validators.required]
 })
