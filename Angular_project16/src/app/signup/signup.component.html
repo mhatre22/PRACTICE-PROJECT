@@ -21,7 +21,7 @@
 <input type="radio" formControlName="gender" value="male">Male
 <input type="radio" formControlName="gender" value="Female">Female
 <input type="radio" formControlName="gender" value="other">other
-<button  [disabled]="!signUpForm.valid" class="sub-mit"><u>SUBMIT</u></button>
+<button [disabled]=!signUpForm.valid (click)="submit() " class="sub-mit" ><u>SUBMIT</u></button>
 </form>
  </div>
 </div>

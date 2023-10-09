@@ -24,8 +24,10 @@ this.signUpForm = this.formBuilder.group({
   address : ['', Validators.required],
   gender : ['', Validators.required]
 })
-
-
 }
+
+submit()  {
+}
+
 }
 
