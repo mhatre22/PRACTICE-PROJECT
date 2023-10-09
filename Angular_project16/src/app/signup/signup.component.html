@@ -10,8 +10,10 @@
 <input class="text" type="text" formControlName="fullname" ><br>
 <span class="err" *ngIf="signUpForm.get('fullname')?.errors?.['required'] && signUpForm.get('fullname')?.touched">fullName is required</span>
 <span class="err" *ngIf="signUpForm.get('fullname')?.errors?.['pattern']">Please Enter valid fullName</span>
-<span class="err" *ngIf="signUpForm.get('fullname')?.errors?.['minlength'] && !signUpForm.get('fullname')?.errors?['pattern']">fullName should be 15 Alphbate</span>
-
+<span class="err" *ngIf="signUpForm.get('fullname')?.errors?.['minlength'] && !signUpForm.get('fullname')?.errors?.['pattern']">fullName should be 15 Alphbate</span>
+<label class="texr">Mob No</label><br>
+<input class="text" type="text" formControlName="mobilenumber"><br>
+<span class="err" *ngIf="signUpForm.get('mobilenumber')?.errors?.['required'] && signUpForm.get('mobilenumber')?.touched">Mobile Number is required</span>
 
 <label class="text">Email : </label><br>
 <input  class="text"  type="text" formControlName="email"><br>
