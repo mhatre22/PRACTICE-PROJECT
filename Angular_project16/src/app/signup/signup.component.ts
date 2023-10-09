@@ -18,7 +18,7 @@ constructor( private formBuilder : FormBuilder){
   }
   signUpFormControlls(){
 this.signUpForm = this.formBuilder.group({
-  name : ['',[Validators.required, Validators.pattern("[a-zA-Z]*$"), Validators.minLength(15)]],
+  fullname : ['',[Validators.required, Validators.pattern("[a-zA-Z]*$"), Validators.minLength(15)]],
   email : ['', Validators.required, Validators.email],
   contact : ['', Validators.required],
   address : ['', Validators.required],

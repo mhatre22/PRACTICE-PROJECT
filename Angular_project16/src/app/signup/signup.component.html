@@ -1,15 +1,18 @@
 
 <div class="signup"><h2>Sign Up</h2>
- <button routerLink="/landing"><u>Back</u></button>
+ <button  class="sub-mit" routerLink="/landing"><u>Back</u></button>
  <br><br>
 
  <div class="reactive">
 <form  [formGroup]="signUpForm!">
     <br>
-<label class="text">Name : </label><br>
-<input class="text" type="text" formControlName="name" ><br>
-<span class="err" *ngIf="signUpForm.get('name')?.errors?.['required'] && signUpForm.get('name')?.touched">Name is required</span>
-<span class="err" *ngIf="signUpForm.get('name')?.errors?.['pattern']">Please Enter valid Name</span>
+<label class="text">FullName : </label><br>
+<input class="text" type="text" formControlName="fullname" ><br>
+<span class="err" *ngIf="signUpForm.get('fullname')?.errors?.['required'] && signUpForm.get('fullname')?.touched">fullName is required</span>
+<span class="err" *ngIf="signUpForm.get('fullname')?.errors?.['pattern']">Please Enter valid fullName</span>
+<span class="err" *ngIf="signUpForm.get('fullname')?.errors?.['minlength'] && !signUpForm.get('fullname')?.errors?['pattern']">fullName should be 15 Alphbate</span>
+
+
 <label class="text">Email : </label><br>
 <input  class="text"  type="text" formControlName="email"><br>
 
