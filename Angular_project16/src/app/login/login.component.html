@@ -15,7 +15,11 @@
 <input  type="text" class="int-text" minlength="8" pattern="[A-Z]{1}[a-zA-Z0-9@#!$%&^*]{8}$" ngModel name="Password" #password ="ngModel" ><br><br> &nbsp;
 <span class="span-err" *ngIf="password.errors?.['minlength']" >Password Should be 8 characters </span>
 <span class="span-err" *ngIf="password.errors?.['pattern'] && !password.errors?.['minlength'] " >Please match password</span>
-<label class="gender">Gender :</label><br><br>
+<label class="pass">Confirm Password</label><br><br>&nbsp;
+<input type="text" class="int-text" ngModel name="ConfirmPassword" #ConfirmPassword='ngModel'><br>
+"
+
+<label class="gender">Gender :</label><br>&nbsp;
 <input type="radio" required value="male" name="gender" ngModel  #gender='ngModel'>male
 <input type="radio" required value="Female" name="gender" ngModel  #gender='ngModel'>Female
 <input type="radio" required value="other" name="gender" ngModel  #gender='ngModel'>other

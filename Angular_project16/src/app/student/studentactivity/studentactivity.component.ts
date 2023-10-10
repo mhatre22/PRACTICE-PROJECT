@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { FormGroup } from '@angular/forms';
+
 import { Router } from '@angular/router';
 
 @Component({
@@ -7,10 +9,13 @@ import { Router } from '@angular/router';
   styleUrls: ['./studentactivity.component.css']
 })
 export class StudentactivityComponent {
+
+
   constructor(private router :Router){
   }
   landing(){
     this.router.navigateByUrl('landing')
   }
+
 
 }

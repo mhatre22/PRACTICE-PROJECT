@@ -11,3 +11,15 @@
     background-color: rgb(76, 220, 76);
     size: 1px;
 }
+.valid{
+    height: 300px;
+    width: 200px;
+    border: black solid;
+    padding: 5px 5px ;
+    text-align: center;
+    background-color: rgb(175, 216, 230);
+}
+ .sub-mit{
+        background-color:rgb(76, 220, 76);
+        text-align: center;
+    }

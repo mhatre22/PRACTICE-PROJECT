@@ -7,10 +7,5 @@ import { Router } from '@angular/router';
   styleUrls: ['./studentdemo.component.css']
 })
 export class StudentdemoComponent {
-  constructor(private router :Router){
-  }
-  landing(){
-    this.router.navigateByUrl('landing')
-  }
 
 }

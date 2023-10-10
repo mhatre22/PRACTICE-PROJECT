@@ -19,14 +19,15 @@ constructor( private formBuilder : FormBuilder){
   signUpFormControlls(){
 this.signUpForm = this.formBuilder.group({
   fullname : ['',[Validators.required, Validators.pattern("[a-zA-Z]*$"), Validators.minLength(10)]],
-  email : ['', Validators.required, Validators.email],
-mobilenumber : ['',[Validators.required, Validators.minLength(10),Validators.maxLength(10),Validators.pattern("[0-9]*$")]],
+  email : ['', [Validators.required, Validators.email,]],
+mobilenumber : ['',[Validators.required, Validators.pattern("[0-9]*$"),Validators.minLength(10),Validators.maxLength(10)]],
   address : ['', Validators.required],
   gender : ['', Validators.required]
 })
 }
 
-submit()  {
+submit( formData:any)  {
+  console.log(formData);
 }
 
 }

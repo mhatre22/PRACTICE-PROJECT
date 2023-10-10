@@ -2,6 +2,7 @@
     background-color: rgb(192, 233, 245);
     height: 1000px;
     width: 100%;
+    text-align: center;
 
 
 }
@@ -24,7 +25,7 @@ margin-top: 10px;
     border: 2px solid black;
     height: 400px;
     width: 500px;
-text-align: left;
+text-align: center;
    background-color: rgb(227, 206, 237);
 
 }
