@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { FormGroup } from '@angular/forms';
 
-import { Router } from '@angular/router';
+
+
 
 @Component({
   selector: 'app-studentactivity',
@@ -11,11 +11,7 @@ import { Router } from '@angular/router';
 export class StudentactivityComponent {
 
 
-  constructor(private router :Router){
-  }
-  landing(){
-    this.router.navigateByUrl('landing')
-  }
+
 
 
 }
