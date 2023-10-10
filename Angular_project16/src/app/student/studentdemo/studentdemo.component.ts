@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormGroup, FormBuilder,Validator } from '@angular/forms';
 
 
 @Component({
@@ -7,5 +8,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./studentdemo.component.css']
 })
 export class StudentdemoComponent {
+
+signInForm!: FormGroup
+showSignInForm : boolean =false;
+constructor(private formBuilder: FormBuilder){}
+showForm(){
+this.showSignInForm = true;
+this.signInForm = this.formBuilder.group({
+  password:[],
+  confirmpassword:[]
+})
+}
 
 }

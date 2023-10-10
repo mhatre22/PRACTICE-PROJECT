@@ -1,4 +1,13 @@
 <div class="student">
     <h2 class="activity">Student Demo</h2>
-    <button  class="sub-mit" routerLink="/landing"><u>Back</u></button>
+    <button  class="sub-mit" routerLink="/landing"><u>Back</u></button><br><br>
+    <button (click)="showForm()">SignIn</button><br>
+
+<form [formGroup]="signInForm" *ngIf="showSignInForm"><br>
+    <label> Password :</label>
+    <input type="text" formControlName="password"><br><br>
+    <label> Confirm Password</label>
+    <input type="text" formcontrolName="ConfirmPassword"><br>
+</form>
 </div>
+
