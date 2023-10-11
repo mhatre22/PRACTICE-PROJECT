@@ -16,3 +16,23 @@
     background-color:rgb(76, 220, 76);
     text-align: center;
 }
+.reactive{
+    border: 2px solid black;
+    height: 400px;
+    width: 500px;
+text-align: center;
+   background-color: rgb(227, 206, 237);
+
+}
+.err{
+    color: red;
+    font-size:large ;
+   
+}
+.text{
+    font-size: 20px;
+    padding: 2px;
+width: 300px;
+margin-top: 10px;
+
+}
