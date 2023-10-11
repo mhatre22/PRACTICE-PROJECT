@@ -1,29 +1,26 @@
-<div class="student">
-    <h2 class="activity">Student Demo</h2>
-    <button  class="sub-mit" routerLink="/landing"><u>Back</u></button><br><br>
-    <button (click)="showForm()">SignIn</button><br>
-<div class="reactive">
-<form [formGroup]="signInForm" *ngIf="showSignInForm"><br>
-    <label class="text">FullName : </label><br>
-<input class="text" type="text" formControlName="fullname" ><br>
-<span class="err" *ngIf="signInForm.get('fullname')?.errors?.['required'] && signInForm.get('fullname')?.touched">fullName is required</span>
-<label class="text">Mobile No : </label><br>
-<input class="text" type="text" formControlName="mobilenumber"><br>
+<button (click)="showForm()">Show SignInForm</button><br>
+<form [formGroup]="SignInForm" *ngIf="showSignInForm">
+password : <input [type]="showpassword ? 'text' :'password' "
+formcontrolName="password" (keyup)="password()">
+<button (click)="showpass()">Show</button><br>
+<span *ngIf="!isMatch && SignInForm.get('password')?.dirty" class="err">
+    password and Confirm password should be same
+</span><br>
+Confirm Password : <input type="text" formcontrolName="confirmpassword" (keyup)="confirmpassword()">
+<span *ngIf="!isMatch && SignInForm.get('confirmpassword')?.dirty" class="err">
+    password and Confirm password should be same
+</span><br>
+<label>Name</label>
+<input type="text" formcontrolName="name"><br>
+<!----copy- copy------->
+<span *ngIf="SignInForm.get('name')?.errors?.['Err']" class="err">
+    Name should not conatin copy word</span>
+<span class="err" *ngIf="SignInForm.get('name')?.errors?.['whitespace']">
+    Name should not contain whitespaces
+</span>
 
-<span class="err" *ngIf="signInForm.get('mobilenumber')?.errors?.['required'] && signInForm.get('mobilenumber')?.touched">Mobile number is required</span>
-<span class="err" *ngIf="signInForm.get('mobilenumber')?.errors?.['pattern'] && signInForm.get('mobilenumber')?.touched">Mobile number should in integer</span>
-<label class="text">Password : </label><br>
-<input class="text" type="text" formControlName="password" pattern="[A-Z]{1}[a-zA-Z0-9@#!$%&^*]{8}$" minlength="9"><br>
-<span class="err" *ngIf="signInForm.get('password')?.errors?.['required'] && signInForm.get('password')?.touched">password  is required </span>
-<span class="err" *ngIf="signInForm.get('password')?.errors?.['pattern'] && signInForm.get('password')?.touched">Password Should be 8 characters</span>
 
-<label class="text">Confirm Password : </label><br>
-<input class="text" type="text" formControlName="confirmpassword" pattern="[A-Z]{1}[a-zA-Z0-9@#!$%&^*]{9}$" minlength="9" maxlength="10"><br>
-<span class="err" *ngIf="signInForm.get('confirmpassword')?.errors?.['required'] && signInForm.get('confirmpassword')?.touched" >Please match password</span>
-<span class="err" *ngIf="signInForm.get('confirmpassword')?.errors?.['maxlength']" >Password Should be 10 characters </span>
 
-<button [disabled]="!signInForm" (click)="submit(signInForm.value)">Submit</button>
 
 </form>
-</div>
 
