@@ -1,5 +1,7 @@
+ 
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-landing',
@@ -7,8 +9,17 @@ import { Router } from '@angular/router';
   styleUrls: ['./landing.component.css']
 })
 export class LandingComponent {
-constructor(private router : Router){
+test : any;
+userName! : string
+constructor(private router : Router,
+   private dataservice :DataService){//Injection depencency
+   
+  }
+  
+ngOnInit(){
+  this.userName =this.dataservice.userFullname;
 }
+
 login(){
   this.router.navigateByUrl('login')
 }
@@ -25,3 +36,4 @@ directive(){
   this.router.navigateByUrl('directive')
 }
 }
+
