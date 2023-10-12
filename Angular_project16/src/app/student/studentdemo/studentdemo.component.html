@@ -1,8 +1,8 @@
 <button (click)="showForm()">Show SignInForm</button><br>
 <form [formGroup]="SignInForm" *ngIf="showSignInForm">
-password : <input [type]="showpassword ? 'text' :'password' "
+password : <input [type]="showPassword ? 'text' :'password' "
 formcontrolName="password" (keyup)="password()">
-<button (click)="showpass()">Show</button><br>
+<button (click)="showPass()">Show</button><br>
 <span *ngIf="!isMatch && SignInForm.get('password')?.dirty" class="err">
     password and Confirm password should be same
 </span><br>

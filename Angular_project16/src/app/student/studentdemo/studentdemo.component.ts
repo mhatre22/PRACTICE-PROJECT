@@ -18,6 +18,7 @@ isMacthConfirm!: boolean;
 pass: any;
 confirmpass: any;
 showpassword! : boolean;
+  showPassword !: boolean;
 constructor(private formBuilder: FormBuilder){}
 showForm(){
 //this.showSignInForm = true;
@@ -69,9 +70,16 @@ confirmpassword(){
   }
   else{
     this.isMacthConfirm=false;
+  }}
+  showPass(){
+this.showPassword=!this.showPassword
   }
 }
-showPass(){
-  this.showpassword = !this.showpassword;
 
-}}
+
+
+
+
+
+
+
