@@ -2,7 +2,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators} from '@angular/forms';
 import { FormGroup } from '@angular/forms';
-import { DataService } from '../data.service';
+
 import { Router } from '@angular/router';
 
 @Component({
@@ -13,8 +13,7 @@ import { Router } from '@angular/router';
 export class SignupComponent {
 signUpForm !: FormGroup;
   
-constructor( private formBuilder : FormBuilder,private dataService : DataService,
-  private router :Router ){}
+constructor( private formBuilder : FormBuilder ){}
   ngOnInit(){
     this.signUpFormControlls()
   }
@@ -30,8 +29,7 @@ mobilenumber : ['',[Validators.required, Validators.pattern("[0-9]*$"),Validator
 
 submit( )  {
   console.log(this.signUpForm.value);
-  this.dataService.userFullname = this.signUpForm.value.userfullname;
-  this.router.navigateByUrl('landing')
+
 }
 
 }
