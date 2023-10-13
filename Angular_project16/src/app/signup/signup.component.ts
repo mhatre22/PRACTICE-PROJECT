@@ -20,6 +20,7 @@ constructor( private formBuilder : FormBuilder,
   }
   ngOnInit(){
     this.signUpFormControlls()
+  this.storingdataservice.studendData = this.student;// set student object to services
   }
   signUpFormControlls(){
 this.signUpForm = this.formBuilder.group({
@@ -30,11 +31,17 @@ mobilenumber : ['',[Validators.required, Validators.pattern("[0-9]*$"),Validator
   gender : ['', Validators.required]
 })
 }
+student={
+  name:'snehal',
+  city:'pen',
+  phone:'25642542542',
+  status:'active'
+}
 
 submit(){
 console.log(this.signUpForm.value);
  this.storingdataservice.userFullName = this.signUpForm.value.fullname;
- console.log('this.storingdataservice.userFullName>>');
+ this.storingdataservice.listOfUsers =['snehal', 'bala', 'apeksha','sumeet']
  this.router.navigateByUrl('/landing');
 }
 

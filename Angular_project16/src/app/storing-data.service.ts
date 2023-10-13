@@ -5,6 +5,9 @@ import { Injectable } from '@angular/core';
 })
 export class StoringDataService {
  userFullName : any;
+listOfUsers: any;
+studendData: any;
+
 
   constructor() { }
 }

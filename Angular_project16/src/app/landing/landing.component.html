@@ -1,9 +1,19 @@
 <div class="parent">
-<h2 *ngIf="!userName"> Welcome to Angular </h2>
+<h1 *ngIf="!userName"> Welcome to Angular </h1>
 <h2 *ngIf="userName"> Welcome {{userName}} </h2>
 <button class="button" (click)="login()"><b>Login</b></button> &nbsp;
 <button class="button" (click)="signup()"><b>Signup</b></button> &nbsp;
 <button class="button" (click)="studentactivity()"><b>Studentactivity</b></button> &nbsp;
 <button class="button" (click)="studentdemo()"><b>Studentdemo</b></button> &nbsp;
 <button class="button" (click)="directive()"><b>Directives</b></button>
+
+<div>{{list}}</div>
+
+<div>{{studentData.name}}</div>
+
+<div>{{studentData.city}}</div>
+
+<div>{{studentData.phone}}</div>
+<div>{{studentData.status}}</div>
+
 </div>

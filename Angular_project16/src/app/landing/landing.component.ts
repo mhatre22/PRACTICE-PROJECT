@@ -13,6 +13,8 @@ import { StoringDataService } from '../storing-data.service';
 export class LandingComponent {
 test : any;
 userName! : string;
+list! :string
+studentData : any;
 constructor(private router : Router,
      private storingdataservice :StoringDataService,
   ){//Injection depencency
@@ -22,6 +24,8 @@ constructor(private router : Router,
 ngOnInit(){
 
  this.userName = this.storingdataservice.userFullName;
+ this.list = this.storingdataservice.listOfUsers;
+ this.studentData = this.storingdataservice.studendData;
 }
 
 login(){

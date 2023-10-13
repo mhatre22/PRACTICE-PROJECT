@@ -23,12 +23,7 @@ import { CommonModule } from '@angular/common';
     LoginComponent,
     SignupComponent,
     DirectivesInAngularComponent,
-    LandingComponent,
-    
-  
- 
-   
-
+    LandingComponent
 
    
   
