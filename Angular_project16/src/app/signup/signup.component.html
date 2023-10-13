@@ -5,7 +5,6 @@
 
  <div class="reactive">
 <form  [formGroup]="signUpForm!">
-    <br>
 <label class="text">FullName : </label><br>
 <input class="text" type="text" formControlName="fullname" ><br>
 <span class="err" *ngIf="signUpForm.get('fullname')?.errors?.['required'] && signUpForm.get('fullname')?.touched">fullName is required</span>

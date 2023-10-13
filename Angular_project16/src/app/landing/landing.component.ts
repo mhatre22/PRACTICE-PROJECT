@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { StoringDataService } from '../storing-data.service';
 
 
+
 @Component({
   selector: 'app-landing',
   templateUrl: './landing.component.html',
@@ -11,7 +12,7 @@ import { StoringDataService } from '../storing-data.service';
 })
 export class LandingComponent {
 test : any;
-userName! : string
+userName! : string;
 constructor(private router : Router,
      private storingdataservice :StoringDataService,
   ){//Injection depencency

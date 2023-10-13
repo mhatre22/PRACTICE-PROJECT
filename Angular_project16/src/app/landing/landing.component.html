@@ -1,6 +1,6 @@
 <div class="parent">
-<h2 class="heading" *ngIf="!userName">My Application</h2>
-<h2 class="heading" *ngIf="userName">Welcome {{userName}} ,</h2>
+<h2 *ngIf="!userName"> Welcome to Angular </h2>
+<h2 *ngIf="userName"> Welcome {{userName}} </h2>
 <button class="button" (click)="login()"><b>Login</b></button> &nbsp;
 <button class="button" (click)="signup()"><b>Signup</b></button> &nbsp;
 <button class="button" (click)="studentactivity()"><b>Studentactivity</b></button> &nbsp;

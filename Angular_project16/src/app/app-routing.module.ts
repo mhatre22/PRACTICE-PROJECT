@@ -4,6 +4,7 @@ import { LandingComponent } from './landing/landing.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { DirectivesInAngularComponent } from './directives-in-angular/directives-in-angular.component';
+import { CommonModule } from '@angular/common';
 
 
 const routes: Routes = [
@@ -17,7 +18,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes),CommonModule],
   exports: [RouterModule],
 })
 export class AppRoutingModule { }

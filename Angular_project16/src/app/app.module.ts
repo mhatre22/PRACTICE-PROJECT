@@ -9,6 +9,8 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { DirectivesInAngularComponent } from './directives-in-angular/directives-in-angular.component';
 import {  FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LandingComponent } from './landing/landing.component';
+import { CommonModule } from '@angular/common';
 
 
 
@@ -21,6 +23,8 @@ import {  FormsModule, ReactiveFormsModule } from '@angular/forms';
     LoginComponent,
     SignupComponent,
     DirectivesInAngularComponent,
+    LandingComponent,
+    
   
  
    
@@ -34,7 +38,8 @@ import {  FormsModule, ReactiveFormsModule } from '@angular/forms';
     RouterModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    CommonModule
 
 
   ],
