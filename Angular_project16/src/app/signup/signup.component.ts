@@ -2,7 +2,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators} from '@angular/forms';
 import { FormGroup } from '@angular/forms';
-
+import { StoringDataService } from '../storing-data.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -13,7 +13,11 @@ import { Router } from '@angular/router';
 export class SignupComponent {
 signUpForm !: FormGroup;
   
-constructor( private formBuilder : FormBuilder ){}
+constructor( private formBuilder : FormBuilder,
+   private storingdataservice :StoringDataService,
+  private router :Router ){
+    
+  }
   ngOnInit(){
     this.signUpFormControlls()
   }
@@ -27,9 +31,11 @@ mobilenumber : ['',[Validators.required, Validators.pattern("[0-9]*$"),Validator
 })
 }
 
-submit( )  {
-  console.log(this.signUpForm.value);
-
+submit(){
+console.log(this.signUpForm.value);
+ this.storingdataservice.userFullName = this.signUpForm.value.fullname;
+ console.log('this.storingdataservice.userFullName>>');
+ this.router.navigateByUrl('/landing');
 }
 
 }

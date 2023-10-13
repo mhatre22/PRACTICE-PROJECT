@@ -1,6 +1,7 @@
  
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { StoringDataService } from '../storing-data.service';
 
 
 @Component({
@@ -12,11 +13,15 @@ export class LandingComponent {
 test : any;
 userName! : string
 constructor(private router : Router,
+     private storingdataservice :StoringDataService,
   ){//Injection depencency
    
   }
   
+ngOnInit(){
 
+ this.userName = this.storingdataservice.userFullName;
+}
 
 login(){
   this.router.navigateByUrl('login')
