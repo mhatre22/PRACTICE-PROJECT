@@ -1,0 +1,11 @@
+.parent{
+    background-color: rgb(238, 168, 77);
+    height: 1000px;
+    width: 100%;
+    text-align: center;
+}
+.button{
+    background-color: rgb(76, 220, 76);
+    size: 1px;
+    text-align: end;
+}

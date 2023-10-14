@@ -43,5 +43,8 @@ studentdemo(){
 directive(){
   this.router.navigateByUrl('directive')
 }
+lifecycle(){
+  this.router.navigateByUrl('lifecycle')
+}
 }
 

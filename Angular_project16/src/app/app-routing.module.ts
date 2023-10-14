@@ -5,11 +5,13 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { DirectivesInAngularComponent } from './directives-in-angular/directives-in-angular.component';
 import { CommonModule } from '@angular/common';
+import { LifecyclehooksComponent } from './lifecyclehooks/lifecyclehooks.component';
 
 
 const routes: Routes = [
 {path: '' ,component : LandingComponent},
 {path: 'landing', component: LandingComponent},
+{path:'lifecycle',component:LifecyclehooksComponent},
 {path: 'login', component: LoginComponent},
 {path: 'signup' ,component: SignupComponent},
 {path : 'directive', component: DirectivesInAngularComponent},

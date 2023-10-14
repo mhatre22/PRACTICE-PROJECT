@@ -11,6 +11,7 @@ import { DirectivesInAngularComponent } from './directives-in-angular/directives
 import {  FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LandingComponent } from './landing/landing.component';
 import { CommonModule } from '@angular/common';
+import { LifecyclehooksComponent } from './lifecyclehooks/lifecyclehooks.component';
 
 
 
@@ -23,7 +24,8 @@ import { CommonModule } from '@angular/common';
     LoginComponent,
     SignupComponent,
     DirectivesInAngularComponent,
-    LandingComponent
+    LandingComponent,
+    LifecyclehooksComponent
 
    
   

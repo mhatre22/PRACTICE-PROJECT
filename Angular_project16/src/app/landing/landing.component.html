@@ -5,15 +5,17 @@
 <button class="button" (click)="signup()"><b>Signup</b></button> &nbsp;
 <button class="button" (click)="studentactivity()"><b>Studentactivity</b></button> &nbsp;
 <button class="button" (click)="studentdemo()"><b>Studentdemo</b></button> &nbsp;
-<button class="button" (click)="directive()"><b>Directives</b></button>
+<button class="button" (click)="directive()"><b>Directives</b></button> &nbsp;
+<button class="button" (click)="lifecycle()"><b>LifecycleHooks</b></button>
+
 
 <div>{{list}}</div>
 
-<div>{{studentData.name}}</div>
+<div *ngIf="studentData">{{studentData.name}}</div>
 
-<div>{{studentData.city}}</div>
+<div *ngIf="studentData">{{studentData.city}}</div>
 
-<div>{{studentData.phone}}</div>
-<div>{{studentData.status}}</div>
+<div *ngIf="studentData">{{studentData.phone}}</div>
+<div *ngIf="studentData">{{studentData.status}}</div>
 
 </div>
