@@ -1,0 +1,51 @@
+<!-------button  (click)="getValue('hello')" mat-raised-button color="accent">Accent</button><br/><br> &nbsp;
+<input placeholder="keyup" #box type="text" (keyup)="getValue(box.value)"><br><br>
+<input placeholder="keyuppress" #box1 type="text" (keypress)="getValue(box1.value)"><br><br>
+<input placeholder="keyupdown" #box2 type="text" (keydown)="getValue(box2.value)">
+<input placeholder="blur" type="text"  #box3 (blur)="getValue(box3.value)">
+<h1 (mouseover)="getValue('over')">Welcome Angular</h1><br>
+<h1 (mouseleave)="getValue('leave')"> Angular</h1>--->
+
+<input type="text" placeholder="Enter  Name" #keyup (keyup)="keyupvalue(keyup.value)" name="name">
+<p> <b>Name Value :{{displayValue}} </b></p>
+<button  (click)="counterValue()" mat-raised-button color="accent">Counter++</button><br/><br> &nbsp;
+<p>{{count}}</p>
+<button  (click)="counterValue1()" mat-raised-button color="primary">Counter--</button><br/><br> &nbsp;
+<div   class="style" *ngIf="isLoggIn">True</div>
+<div   class="style" *ngIf="!isLoggIn">Flase</div>
+<!------
+<input type="text" placeholder="propertyBinding" [value]="name">
+<div [ngSwitch]="color">
+ <h3 *ngSwitchCase="'green'" style="color: green;"> Green color</h3>
+ <h3 *ngSwitchCase="'blue'" style="color: rgb(19, 18, 98);"> Blue color</h3>
+ <h3 *ngSwitchCase="'pink'" style="color: rgb(219, 20, 219);"> Pink color</h3>
+ <h3 *ngSwitchCase="'red'" style="color: rgb(217, 18, 18);"> Red color</h3>
+ <h3 *ngSwitchDefault> Defalut Value</h3>
+</div>
+<table class="table">
+    <tr >
+<th  class="th"    *ngFor=" let student of studentHeading">{{student}}</th>
+    </tr>
+ <td class=" td">
+    <tr *ngFor="let student of details"> {{student.name}}</tr>
+ </td>
+ <td class=" td">
+    <tr *ngFor="let student of details">{{student.phone}}</tr>
+ </td>
+ <td class=" td">
+    <tr *ngFor="let student of details"> {{student.email}}</tr>
+</td>
+<td class=" td"> <tr *ngFor="let student of details"> {{student.city}}</tr>
+</td>
+<td class=" td">
+    <tr *ngFor="let student of details"> {{student.gender}}</tr>
+</td>
+</table><br/>
+<button  (click)="toggle()" mat-raised-button color="accent">Toggle Me!!</button>
+<p>{{toggleMe}}</p><br> -->
+<input type="text" placeholder="Enter tondolist" #task>
+<button (click)="todolist(task.value)">+Add</button>
+<ul>
+    <li *ngFor="let item of list">{{item.name}}
+    <button (click)="removeitem(item.id)">Remove</button></li>
+</ul>
