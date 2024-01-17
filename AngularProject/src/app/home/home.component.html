@@ -4,7 +4,7 @@
 <input placeholder="keyupdown" #box2 type="text" (keydown)="getValue(box2.value)">
 <input placeholder="blur" type="text"  #box3 (blur)="getValue(box3.value)">
 <h1 (mouseover)="getValue('over')">Welcome Angular</h1><br>
-<h1 (mouseleave)="getValue('leave')"> Angular</h1>--->
+<h1 (mouseleave)="getValue('leave')"> Angular</h1>
 
 <input type="text" placeholder="Enter  Name" #keyup (keyup)="keyupvalue(keyup.value)" name="name">
 <p> <b>Name Value :{{displayValue}} </b></p>
@@ -13,7 +13,7 @@
 <button  (click)="counterValue1()" mat-raised-button color="primary">Counter--</button><br/><br> &nbsp;
 <div   class="style" *ngIf="isLoggIn">True</div>
 <div   class="style" *ngIf="!isLoggIn">Flase</div>
-<!------
+----
 <input type="text" placeholder="propertyBinding" [value]="name">
 <div [ngSwitch]="color">
  <h3 *ngSwitchCase="'green'" style="color: green;"> Green color</h3>
@@ -42,10 +42,14 @@
 </td>
 </table><br/>
 <button  (click)="toggle()" mat-raised-button color="accent">Toggle Me!!</button>
-<p>{{toggleMe}}</p><br> -->
+<p>{{toggleMe}}</p><br>
 <input type="text" placeholder="Enter tondolist" #task>
 <button (click)="todolist(task.value)">+Add</button>
 <ul>
     <li *ngFor="let item of list">{{item.name}}
     <button (click)="removeitem(item.id)">Remove</button></li>
-</ul>
+</ul>-->
+<button (click)="adminlogin()">Admin LogIn</button> &nbsp;
+<button (click)="adminsignup()">Admin Signup</button> &nbsp;
+<button (click)="ownerlogin()">Owner LogIn</button>&nbsp;
+<button (click)="ownersignup()">Owner Signup</button>
