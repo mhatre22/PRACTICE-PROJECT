@@ -22,4 +22,7 @@ ownerlogin(){
 ownersignup(){
   this.route.navigateByUrl('owner/ownersignup')
 }
+parent(){
+  this.route.navigateByUrl('parent')
+}
   }

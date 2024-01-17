@@ -1,1 +1,15 @@
-<p>adminlogin works!</p>
+<h1>Login Form</h1>
+<h3>Template Driven</h3>
+<div class="login">
+    <form #loginform="ngForm"><br>
+        <label>FullName  :  </label>&nbsp;
+        <input type="text" ngModel name="fullName" #fullname='ngModel' pattern="[a-zA-Z]*$" required  minlength="5"><br>
+        <span class="span-err" *ngIf="fullname.errors?.['pattern'] && fullname.touched">please enter alphabate</span>
+        <span class="span-err" *ngIf="fullname.errors?.['minlength'] && !fullname.errors?.['pattern']">Please enter only 5 alphabate</span><br>
+    <label> Password : </label>
+    <input type="text" ngModel name="password" #password='ngModel' pattern="[[A-Z]{2}[!@#$%^&-9]{6}]*$" required minlength="8" ><br>
+<span class="span-err" *ngIf="password.errors?.['pattern'] && password.touched"> enter valid Password</span>
+<input type="radio" required value="male" name="gender" ngModel #gender='ngModel'>Male
+<button  (click)="userlogin(loginform.value)" [disabled]="!loginform.valid"> Submit</button>
+</form>
+</div>

@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./adminlogin.component.scss']
 })
 export class AdminloginComponent {
-
+  userlogin(data:any){
+console.log(data);
+}
 }
